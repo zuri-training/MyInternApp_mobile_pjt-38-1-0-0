@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:mobile_app/util/general_use.dart';
-import 'package:mobile_app/screens/sign_in.dart';
-import 'package:mobile_app/screens/sign_up.dart';
-import 'package:mobile_app/screens/sign_up _stu-page_2.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
+import 'package:mobile_app/screens/sign__up_emp-page.dart';
+import 'package:mobile_app/screens/sign_in.dart';
+import 'package:mobile_app/screens/sign_up _stu-page_2.dart';
+import 'package:mobile_app/screens/sign_up.dart';
+import 'package:mobile_app/util/general_use.dart';
 
 class GeneralGroup extends StatefulWidget {
   const GeneralGroup({Key? key}) : super(key: key);
@@ -31,9 +32,15 @@ class _GeneralGroupState extends State<GeneralGroup> {
       );
     } else if (choice.title == "Student") {
       Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => SignUpStu2()), );
-    } else {}
+        context,
+        MaterialPageRoute(builder: (context) => SignUpStu2()),
+      );
+    } else if (choice.title == "Employer") {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => SignUpEmp2()),
+      );
+    }
   }
 
   @override
